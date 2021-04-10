@@ -1,6 +1,8 @@
 import React from 'react';
 import { Typography, Button, Container, makeStyles, TextField, } from '@material-ui/core';
 import KeyboardArrowRightIcon from '@material-ui/icons/KeyboardArrowRight';
+import ReactJson from 'react-json-view'
+
 
 
 import axios from 'axios'
@@ -21,7 +23,7 @@ const Main = () => {
     const [url, setUrl] = useState('')
     const [title, setTitle] = useState('')
     const [content, setContent] = useState('')
-    const [ans,setAns]=useState({})
+    const [ans, setAns] = useState([])
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -98,9 +100,10 @@ const Main = () => {
 
                 <div>
                     {
-                    ans && <div>
-                        {ans}
-                        {/* {"success":true,"title":{"decision":"impartial","score":0.7590272426605225},"content":{"keywords":[]},"domain":{"domain":"cricbuzz.com","category":"unsure"}} */}
+                        ans && <div>
+                            <br></br>
+                            <ReactJson src={ans} theme="solarized" style={{ padding: 20, fontSize: 14 }} />
+
                         </div>
                     }
                 </div>
