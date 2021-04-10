@@ -1,6 +1,7 @@
 import './App.css';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+// import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { BrowserRouter as Router,Switch,Route } from 'react-router-dom'
 import Main from './pages/main';
 
 const theme = createMuiTheme({

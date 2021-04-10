@@ -21,8 +21,10 @@ const Main = () => {
     const [url, setUrl] = useState('')
     const [title, setTitle] = useState('')
     const [content, setContent] = useState('')
+    const [ans,setAns]=useState({})
 
-    const handleSubmit = () => {
+    const handleSubmit = (e) => {
+        e.preventDefault()
         // console.log('hey')
         var data = JSON.stringify({ "url": url, "title": title, "content": content });
 
@@ -39,6 +41,7 @@ const Main = () => {
         axios(config)
             .then(function (response) {
                 console.log(JSON.stringify(response.data));
+                setAns(JSON.stringify(response.data));
             })
             .catch(function (error) {
                 console.log(error);
@@ -57,17 +60,17 @@ const Main = () => {
                     onSubmit={handleSubmit}
                 >
                     <TextField
-                        onChange={(e) => setTitle(e.target.value)}
+                        onChange={(e) => setUrl(e.target.value)}
                         className={classes.field}
-                        label="Title"
+                        label="URL"
                         variant="outlined"
                         color="primary"
                         fullWidth
                     />
                     <TextField
-                        onChange={(e) => setUrl(e.target.value)}
+                        onChange={(e) => setTitle(e.target.value)}
                         className={classes.field}
-                        label="URL"
+                        label="Title"
                         variant="outlined"
                         color="primary"
                         fullWidth
@@ -92,6 +95,15 @@ const Main = () => {
                         Submit
         </Button>
                 </form>
+
+                <div>
+                    {
+                    ans && <div>
+                        {ans}
+                        {/* {"success":true,"title":{"decision":"impartial","score":0.7590272426605225},"content":{"keywords":[]},"domain":{"domain":"cricbuzz.com","category":"unsure"}} */}
+                        </div>
+                    }
+                </div>
 
             </Container>
         </div>
