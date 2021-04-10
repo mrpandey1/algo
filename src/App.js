@@ -1,24 +1,56 @@
-import logo from './logo.svg';
 import './App.css';
-
+import axios from 'axios'
+import {useState} from 'react'
 function App() {
+
+  const [url,setUrl]=useState('')
+  const [title,setTitle]=useState('')
+  const [content,setContent]=useState('')  
+
+  const handleSubmit=()=>{
+    // console.log('hey')
+    var data = JSON.stringify({"url":url,"title":title,"content":content});
+
+    var config = {
+      method: 'post',
+      url: '/fakebox/check',
+      headers: { 
+        'Content-Type': 'application/json'
+      },
+      data : data
+    };
+
+    axios(config)
+    .then(function (response) {
+      console.log(JSON.stringify(response.data));
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <label>URL</label>
+      <input type="text"  onChange={(e)=>setUrl(e.target.value)} >
+        </input>
+      <br></br><br></br>
+      <input  onChange={(e)=>setTitle(e.target.value)}  type="text">
+        </input>
+      <br></br><br></br>
+      <input onChange={(e)=>setContent(e.target.value)} type="text" className="content">
+        
+        </input>
+      <br></br><br></br>
+
+      <div className = "Button">
+        <button onClick={handleSubmit}>Submit</button>
+      </div>
+
     </div>
+
+    
+    
   );
 }
 
