@@ -1,14 +1,16 @@
 # Fake News Detection
 
+Nowadays, the authenticity of information has become a longstanding issue affecting businesses and society, false information acquires a tremendous potential to cause real-world impacts within minutes, for millions of users. Moreover, In the past decade, social media has become increasingly popular for news consumption due to its easy access, fast dissemination, and low cost. However, social media also enables the wide propagation of "fake news”. Therefore, fake news detection on social media has recently become an emerging research area that is attracting a lot of attention. This project is one of the initiatives to tackle and solve this problem and create awareness among readers.
+
 --- 
 
-Fake News Detection is a webpsite, chrome extension and a chat bot created using machine learning model bot which will tell you if the news is fake or real along with percentage of the news being fake or real.
+Fake News Detection is a website, chrome extension and a chatbot created using a machine learning model bot that will tell you if the news is fake or real along with the percentage of the news being fake or real.
 
 ## Screenshots
 
 ### Web App 
 
-In the below image you can see the URL of websie is unsure according to our model and content is biased as contains the words like "WARNS", "FOLLOWS" etc. and title is impartial
+In the below image you can see the URL of the website is unsure according to our model and the content is biased as contains the words like "WARNS", "FOLLOWS" etc. and the title is impartial
 
 
 
@@ -26,7 +28,7 @@ In the below image you can see the URL is trusted which is "New York Times" as i
 
 ### Chat Bot
 
-We just need to provide a message to a bot and then bot will determine if the message is fake or not using our machine learning model and will send us the results
+We just need to provide a message to a bot and then the bot will determine if the message is fake or not using our machine learning model and will send us the results
 
 
 ![alt text](https://github.com/mrpandey1/algo/blob/main/Screenshots/bot.jpeg)
@@ -36,7 +38,7 @@ We just need to provide a message to a bot and then bot will determine if the me
 
 ### Chrome Extension
 
-You don't visit the website all time or send the message to bot to determine if the content of the website are fake or real. You can just install our Fake News chrome extension and now you can check the news is fake or not directly in the browser tab.
+You don't visit the website all time or send the message to the bot to determine if the content of the website is fake or real. You can just install our Fake News chrome extension and now you can check the news is fake or not directly in the browser tab.
 
 
 ![alt text](https://github.com/mrpandey1/algo/blob/main/Screenshots/extension.png)
