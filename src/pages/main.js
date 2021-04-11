@@ -1,8 +1,8 @@
 import React from 'react';
-import { Typography, Button, Container, makeStyles, TextField, } from '@material-ui/core';
+import { Button, Container, makeStyles, TextField, Typography } from '@material-ui/core';
 import KeyboardArrowRightIcon from '@material-ui/icons/KeyboardArrowRight';
 import ReactJson from 'react-json-view'
-
+import Table from '../components/Table';
 
 
 import axios from 'axios'
@@ -23,7 +23,7 @@ const Main = () => {
     const [url, setUrl] = useState('')
     const [title, setTitle] = useState('')
     const [content, setContent] = useState('')
-    const [ans, setAns] = useState([])
+    const [ans, setAns] = useState(undefined)
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -42,8 +42,8 @@ const Main = () => {
 
         axios(config)
             .then(function (response) {
-                console.log(JSON.stringify(response.data));
-                setAns(JSON.stringify(response.data));
+                console.log(response.data);
+                setAns(response.data);
             })
             .catch(function (error) {
                 console.log(error);
@@ -99,13 +99,15 @@ const Main = () => {
                 </form>
 
                 <div>
-                    {
+                    {/* {
                         ans && <div>
                             <br></br>
                             <ReactJson src={ans} theme="solarized" style={{ padding: 20, fontSize: 14 }} />
 
                         </div>
-                    }
+                    } */}
+                    <Typography align="center" variant="h6" color="secondary" style={{ paddingTop: 18 }} >Analysis</Typography>
+                    <Table ans={ans} />
                 </div>
 
             </Container>
