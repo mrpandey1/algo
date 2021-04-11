@@ -64,9 +64,9 @@ You don't visit the website all time or send the message to the bot to determine
 
 ## Team Members
 
-1. (https://github.com/mrpandey1 "Nishant Pandey")
-2. Saurabh Lengare
-3. Gaurang Keluskar
-4. Bhavartha Khawale
-5. Prashant Channe
-6. Nupur Sawarkar
+1. [Nishant Pandey](https://github.com/mrpandey1)
+2. [Saurabh Lengare](https://github.com/saurabhlengare15)
+3. [Gaurang Keluskar](https://github.com/gaurangkeluskar22/)
+4. [Bhavartha Khawale](https://github.com/Bhavartha/)
+5. [Prashant Channe](https://github.com/prashantchanne12)
+6. [Nupur Sawarkar](https://www.linkedin.com/in/nupur-sawarkar-7199691a0/)
