@@ -4,6 +4,10 @@ import KeyboardArrowRightIcon from '@material-ui/icons/KeyboardArrowRight';
 import ReactJson from 'react-json-view'
 import Table from '../components/Table';
 
+import TableChartOutlinedIcon from '@material-ui/icons/TableChartOutlined';
+import AccountTreeOutlinedIcon from '@material-ui/icons/AccountTreeOutlined';
+import ToggleButton from '@material-ui/lab/ToggleButton';
+import ToggleButtonGroup from '@material-ui/lab/ToggleButtonGroup';
 
 import axios from 'axios'
 import { useState } from 'react'
@@ -18,6 +22,16 @@ const useStyles = makeStyles({
 });
 
 const Main = () => {
+    const [toggle, setToggle] = React.useState('table');
+
+    const handleAlignment = () => {
+        if (toggle === 'table') {
+            setToggle('json')
+        } else {
+            setToggle('table');
+        }
+
+    };
 
 
     const [url, setUrl] = useState('')
@@ -98,16 +112,29 @@ const Main = () => {
         </Button>
                 </form>
 
+                <ToggleButtonGroup
+                    exclusive
+                    onChange={handleAlignment}
+                    aria-label="text alignment"
+                    style={{ display: 'flex', justifyContent: 'center' }}
+                >
+                    <ToggleButton value="left" aria-label="left aligned" disabled={true ? toggle === 'table' : false}>
+                        <TableChartOutlinedIcon />
+                    </ToggleButton>
+                    <ToggleButton value="center" aria-label="centered" disabled={true ? toggle === 'json' : false}>
+                        <AccountTreeOutlinedIcon />
+                    </ToggleButton>
+                </ToggleButtonGroup>
+
                 <div>
-                    {/* {
+                    {toggle === 'json' ?
                         ans && <div>
                             <br></br>
                             <ReactJson src={ans} theme="solarized" style={{ padding: 20, fontSize: 14 }} />
 
                         </div>
-                    } */}
-                    <Typography align="center" variant="h6" color="secondary" style={{ paddingTop: 18 }} >Analysis</Typography>
-                    <Table ans={ans} />
+                        : <>  <Typography align="center" variant="h6" color="secondary" style={{ paddingTop: 18 }} >Analysis</Typography>
+                            <Table ans={ans} /></>}
                 </div>
 
             </Container>
