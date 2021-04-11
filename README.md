@@ -31,15 +31,16 @@ In the below image you can see the URL of the website is unsure according to our
 
 
 
-![alt text](https://github.com/mrpandey1/algo/blob/main/Screenshots/trusted.png)
+
+![alt text](https://github.com/mrpandey1/algo/blob/main/Screenshots/unsure.png)
 
 
 
 In the below image you can see the URL is trusted which is "New York Times" as it is a genuine website.
 
 
+![alt text](https://github.com/mrpandey1/algo/blob/main/Screenshots/trusted.png)
 
-![alt text](https://github.com/mrpandey1/algo/blob/main/Screenshots/unsure.png)
 
 ----
 
