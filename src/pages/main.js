@@ -23,7 +23,7 @@ const Main = () => {
     const [url, setUrl] = useState('')
     const [title, setTitle] = useState('')
     const [content, setContent] = useState('')
-    const [ans, setAns] = useState([])
+    const [ans, setAns] = useState({})
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -42,8 +42,10 @@ const Main = () => {
 
         axios(config)
             .then(function (response) {
-                console.log(JSON.stringify(response.data));
-                setAns(JSON.stringify(response.data));
+                // console.log(JSON.stringify(response.data));
+                setAns(response.data);
+                console.log(ans);
+                console.log(typeof(ans));
             })
             .catch(function (error) {
                 console.log(error);
@@ -103,7 +105,6 @@ const Main = () => {
                         ans && <div>
                             <br></br>
                             <ReactJson src={ans} theme="solarized" style={{ padding: 20, fontSize: 14 }} />
-
                         </div>
                     }
                 </div>
