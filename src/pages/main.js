@@ -131,7 +131,6 @@ const Main = () => {
                         ans && <div>
                             <br></br>
                             <ReactJson src={ans} theme="solarized" style={{ padding: 20, fontSize: 14 }} />
-
                         </div>
                         : <>  <Typography align="center" variant="h6" color="secondary" style={{ paddingTop: 18 }} >Analysis</Typography>
                             <Table ans={ans} /></>}
