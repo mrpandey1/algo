@@ -64,7 +64,7 @@ You don't visit the website all time or send the message to the bot to determine
 
 ## Team Members
 
-1. ![Nishant Pandey](https://github.com/mrpandey1 "Nishant Pandey")
+1. (https://github.com/mrpandey1 "Nishant Pandey")
 2. Saurabh Lengare
 3. Gaurang Keluskar
 4. Bhavartha Khawale
