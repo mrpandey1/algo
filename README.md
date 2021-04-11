@@ -6,6 +6,23 @@ Nowadays, the authenticity of information has become a longstanding issue affect
 
 Fake News Detection is a website, chrome extension and a chatbot created using a machine learning model bot that will tell you if the news is fake or real along with the percentage of the news being fake or real.
 
+---
+
+## Tools & Technologies
+1. Docker
+2. Python 3.8
+3. Flask
+4. FakeBox
+5. Tensorflow
+6. React
+7. Twilio
+8. JavaScript
+9. Chrome - for extension
+10. Hosting - pythonanywhere, heroku
+
+---
+
+
 ## Screenshots
 
 ### Web App 
